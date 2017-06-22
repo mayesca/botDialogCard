@@ -1,3 +1,5 @@
+//Author: Cameron Mayes
+//Version: 1.0.0
 var restify = require('restify');
 var builder = require('botbuilder');
 
@@ -19,6 +21,7 @@ var bot = new builder.UniversalBot(connector, function(session){
     session.send("Hello, what can I do for you today? (Type option(s) for list of options)");
 });
 
+//Running the main dialog
 bot.dialog('mainDialog', [
     function(session){
         builder.Prompts.text(session, "Please Select an option: News|Weather");
@@ -35,12 +38,14 @@ bot.dialog('mainDialog', [
         matches: /^option*s*/i
 });
 
+//Ending the session on user request. "Cancel"
 bot.dialog('cancelDialog', function(session){
     session.endConversation("Goodbye.");
 }).triggerAction({
         matches: /cancel/i
 });
 
+//Creating the appropriate card to send back to the user.
 function getCard(session, results){
     //console.log("\n\n\n\n\n" + results.response.entity + "\n\n\n");
     var cardType = results.response.toLowerCase();
