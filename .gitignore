@@ -1,0 +1,7 @@
+##For info on package.json files visit https://docs.npmjs.com/cli/init
+
+##package.json files
+*.json
+
+##node packages
+node_modues/
