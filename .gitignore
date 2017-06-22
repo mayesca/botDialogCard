@@ -3,9 +3,3 @@
 ##package.json files
 *.json
 
-##node packages
-<<<<<<< HEAD
-node_modules/
-=======
-node_modules/
->>>>>>> 46773b7cfe2cf8ebb4d2faa951b8597798ac7d35
