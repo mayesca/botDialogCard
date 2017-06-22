@@ -18,7 +18,7 @@ server.post('/api/messages', connector.listen());
 
 //Setting up the bot
 var bot = new builder.UniversalBot(connector, function(session){
-    session.send("Hello, what can I do for you today? (Type option(s) for list of options)");
+    session.send("Hello, please type option(s) for list of options)");
 });
 
 //Running the main dialog
