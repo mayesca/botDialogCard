@@ -4,4 +4,4 @@
 *.json
 
 ##node packages
-node_modues/
+node_modules/
